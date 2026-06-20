@@ -2111,6 +2111,12 @@ li::before {
   border-color: rgba(255, 255, 255, 0.1);
 }
 
+.calc-tab.is-active.facebook {
+  background: linear-gradient(135deg, #1877f2 0%, #0052cc 100%);
+  box-shadow: 0 6px 20px rgba(24, 119, 242, 0.25);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
 .tab-svg {
   width: 18px;
   height: 18px;
@@ -2472,6 +2478,24 @@ li::before {
   color: #f7931a;
   border-color: rgba(247, 147, 26, 0.3);
   background: rgba(247, 147, 26, 0.05);
+}
+
+.gateway-badge.upi {
+  color: #097969;
+  border-color: rgba(9, 121, 105, 0.3);
+  background: rgba(9, 121, 105, 0.05);
+}
+
+.gateway-badge.card {
+  color: #3b82f6;
+  border-color: rgba(59, 130, 246, 0.3);
+  background: rgba(59, 130, 246, 0.05);
+}
+
+.gateway-badge.cashapp {
+  color: #00d632;
+  border-color: rgba(0, 214, 50, 0.3);
+  background: rgba(0, 214, 50, 0.05);
 }
 
 /* ════════════════════════════════════════════ RESPONSIVE BREAKPOINTS ═══ */

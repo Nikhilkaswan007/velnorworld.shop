@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 
-type Platform = "instagram" | "tiktok" | "youtube";
+type Platform = "instagram" | "tiktok" | "youtube" | "facebook";
 
 interface Package {
   name: string;
@@ -77,6 +77,38 @@ const PACKAGES: Record<Exclude<Platform, "youtube">, Package[]> = {
       ],
     },
   ],
+  facebook: [
+    {
+      name: "Starter Package",
+      price: "$30",
+      countLabel: "5,000 Followers",
+      features: ["5K new Followers", "1 Page Permanent Post", "Story Promotion"],
+    },
+    {
+      name: "Growth Package",
+      price: "$50",
+      countLabel: "10,000 Followers",
+      features: ["10K Followers", "2 Pages Permanent Post", "Story Promotion", "Story Highlight"],
+    },
+    {
+      name: "Premium Package",
+      price: "$95",
+      countLabel: "20,000 Followers",
+      features: ["20K Followers", "3 Pages Permanent Post", "Story Promotion", "Story Highlight"],
+    },
+    {
+      name: "Ultimate Package",
+      price: "$175",
+      countLabel: "50,000 Followers",
+      features: [
+        "50K Followers",
+        "All Pages Promotion",
+        "Permanent Posts",
+        "Story Promotion",
+        "Story Highlight",
+      ],
+    },
+  ],
 };
 
 // SVG Icons
@@ -98,6 +130,12 @@ const YouTubeIcon = () => (
   <svg className="tab-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
     <path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 0 0-1.95 1.96A29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58 2.78 2.78 0 0 0 1.95 1.96C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.96A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"></path>
     <polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02"></polygon>
+  </svg>
+);
+
+const FacebookIcon = () => (
+  <svg className="tab-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+    <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
   </svg>
 );
 
@@ -131,7 +169,7 @@ export default function Packages() {
 
   const getWhatsAppLink = (pkg: Package) => {
     const text = encodeURIComponent(
-      `Hello Velnor World!\n\nI want to order the *${platform.toUpperCase()} ${pkg.name}* for *${pkg.price}* (${pkg.countLabel}).\n\nI have completed the payment. Here is my payment screenshot and account details.`
+      `Hello Velnor World!\n\nI want to order the *${platform.toUpperCase()} ${pkg.name}* for *${pkg.price}* (${pkg.countLabel}).\n\nPlease let me know the available payment methods so I can complete my order!`
     );
     return `https://wa.me/${WHATSAPP_NUMBER}?text=${text}`;
   };
@@ -188,7 +226,7 @@ export default function Packages() {
         <p className="eyebrow">Promotion Packages</p>
         <h2 id="packages-title">Select Your Platform</h2>
         <p className="section-subtitle">
-          Choose Instagram, TikTok, or YouTube. Follow manual invoice gateways, then submit your payment screenshot on WhatsApp to launch promotion.
+          Choose Instagram, TikTok, YouTube, or Facebook. Follow manual invoice gateways, then submit your payment screenshot on WhatsApp to launch promotion.
         </p>
       </div>
 
@@ -223,6 +261,16 @@ export default function Packages() {
         >
           <YouTubeIcon />
           <span>YouTube</span>
+        </button>
+        <button
+          className={`calc-tab ${platform === "facebook" ? "is-active facebook" : ""}`}
+          type="button"
+          role="tab"
+          aria-selected={platform === "facebook"}
+          onClick={() => handlePlatformChange("facebook")}
+        >
+          <FacebookIcon />
+          <span>Facebook</span>
         </button>
       </div>
 
@@ -473,34 +521,17 @@ export default function Packages() {
       )}
 
       {/* ───────────────────────────────────────────────────────────────── */}
-      {/* 3. COMMON: Clickable Payment Gateway Request Badges */}
+      {/* 3. COMMON: Accepted Payment Platforms (Static Badges) */}
       {/* ───────────────────────────────────────────────────────────────── */}
-      <div style={{ marginTop: "40px", width: "100%" }}>
-        <div className="payment-gateways-row">
-          <a
-            className="gateway-badge stripe clickable-badge"
-            href={`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent("Hello Velnor World! I would like to pay for my campaign using Stripe. Please send me the Stripe payment invoice link.")}`}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Stripe Gateway
-          </a>
-          <a
-            className="gateway-badge paypal clickable-badge"
-            href={`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent("Hello Velnor World! I would like to pay for my campaign using PayPal. Please send me the PayPal payment details.")}`}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            PayPal Checkout
-          </a>
-          <a
-            className="gateway-badge crypto clickable-badge"
-            href={`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent("Hello Velnor World! I would like to pay for my campaign using Crypto. Please send me the Crypto wallet details (USDT/BTC).")}`}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Crypto Accepted
-          </a>
+      <div style={{ marginTop: "40px", width: "100%", display: "flex", flexDirection: "column", alignItems: "center", gap: "16px" }}>
+        <p className="eyebrow" style={{ marginBottom: "0" }}>Supported Payment Channels</p>
+        <div className="payment-gateways-row" style={{ marginTop: "0" }}>
+          <span className="gateway-badge stripe">Stripe</span>
+          <span className="gateway-badge paypal">PayPal</span>
+          <span className="gateway-badge card">Credit Card</span>
+          <span className="gateway-badge cashapp">Cash App</span>
+          <span className="gateway-badge upi">UPI / Net Banking</span>
+          <span className="gateway-badge crypto">Crypto Accepted</span>
         </div>
       </div>
     </section>

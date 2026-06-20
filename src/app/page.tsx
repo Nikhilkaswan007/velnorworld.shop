@@ -54,7 +54,7 @@ export default function Home() {
             </div>
             <div className="flow-step-desc">
               <h3>Select Package</h3>
-              <p>Choose Instagram, TikTok, or YouTube, then pick the exact promotion tier you need.</p>
+              <p>Choose Instagram, TikTok, YouTube, or Facebook, then pick the exact promotion tier you need.</p>
             </div>
           </div>
 
@@ -66,14 +66,13 @@ export default function Home() {
           <div className="process-flow-step">
             <div className="step-illustration-circle">
               <svg className="flow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                <rect x="2" y="5" width="20" height="14" rx="2" ry="2" />
-                <line x1="2" y1="10" x2="22" y2="10" />
+                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
               </svg>
               <span className="flow-step-num">02</span>
             </div>
             <div className="flow-step-desc">
-              <h3>Secure Manual Payment</h3>
-              <p>Scan the invoice QR code or use direct checkout links (Stripe, PayPal, or Crypto) to pay.</p>
+              <h3>Order on WhatsApp</h3>
+              <p>Click "Order via WhatsApp" to launch the chat with your package specifications pre-loaded.</p>
             </div>
           </div>
 
@@ -85,14 +84,14 @@ export default function Home() {
           <div className="process-flow-step">
             <div className="step-illustration-circle">
               <svg className="flow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z" />
-                <circle cx="12" cy="13" r="4" />
+                <rect x="2" y="5" width="20" height="14" rx="2" ry="2" />
+                <line x1="2" y1="10" x2="22" y2="10" />
               </svg>
               <span className="flow-step-num">03</span>
             </div>
             <div className="flow-step-desc">
-              <h3>Take Screenshot</h3>
-              <p>Capture a screenshot of your successful transaction receipt or invoice verification.</p>
+              <h3>Select Payment Option</h3>
+              <p>Chat with us to pick your preferred option: Stripe, PayPal, Cards, UPI, Cash App, or Crypto.</p>
             </div>
           </div>
 
@@ -104,13 +103,14 @@ export default function Home() {
           <div className="process-flow-step">
             <div className="step-illustration-circle">
               <svg className="flow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                <polyline points="22 4 12 14.01 9 11.01" />
               </svg>
               <span className="flow-step-num">04</span>
             </div>
             <div className="flow-step-desc">
-              <h3>Submit on WhatsApp</h3>
-              <p>Send the receipt screenshot and account profile link directly to our WhatsApp support representative (or email backup).</p>
+              <h3>Pay &amp; Launch Campaign</h3>
+              <p>Complete payment, send the screenshot receipt in the chat, and your campaign starts within 24 hours.</p>
             </div>
           </div>
         </div>

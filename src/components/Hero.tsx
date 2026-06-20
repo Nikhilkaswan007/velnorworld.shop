@@ -28,7 +28,7 @@ export default function Hero() {
             Exponential growth. <span className="gradient-text">Simplified.</span>
           </h1>
           <p className="hero-desc">
-            Vibrant, reliable, and organic promotion tiers for Instagram, TikTok, and YouTube.
+            Vibrant, reliable, and organic promotion tiers for Instagram, TikTok, YouTube, and Facebook.
             No passwords required. Choose your goal and start growing within 24 hours.
           </p>
           <div className="hero-actions">
