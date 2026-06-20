@@ -81,7 +81,7 @@ export default function FAQ() {
             <span className="faq-chevron" aria-hidden="true"></span>
           </summary>
           <div className="faq-answer">
-            <p>Absolutely. Simply send a new order email referencing your existing campaign and the upgraded package. The difference is handled as a separate order with the same fast review process.</p>
+            <p>Absolutely. Simply chat with us on WhatsApp or send a new email referencing your existing campaign and the upgraded package. The difference is handled as a separate order with the same fast review process.</p>
           </div>
         </details>
       </div>

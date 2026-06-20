@@ -226,7 +226,7 @@ export default function Packages() {
         <p className="eyebrow">Promotion Packages</p>
         <h2 id="packages-title">Select Your Platform</h2>
         <p className="section-subtitle">
-          Choose Instagram, TikTok, YouTube, or Facebook. Follow manual invoice gateways, then submit your payment screenshot on WhatsApp to launch promotion.
+          Choose Instagram, TikTok, YouTube, or Facebook. Share your selection directly on WhatsApp to select your preferred payment method and launch your campaign.
         </p>
       </div>
 

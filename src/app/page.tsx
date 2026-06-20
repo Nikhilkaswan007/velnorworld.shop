@@ -35,7 +35,7 @@ export default function Home() {
           <p className="eyebrow">Onboarding Process</p>
           <h2 id="process-title">How Social Promotion Works</h2>
           <p className="section-subtitle">
-            Follow our straightforward four-step manual campaign onboarding pathway to launch your promotion safely and password-free.
+            Follow our simple four-step pathway to select your package, request your preferred payment method in chat, and start your campaign safely.
           </p>
         </div>
 
