@@ -128,7 +128,7 @@ export default function Home() {
             checked quickly.
           </p>
         </div>
-        <a className="button button-primary" href="mailto:support@velnorworld.shop?subject=Package%20Order">
+        <a className="button button-primary" href="mailto:velnorteam@gmail.com?subject=Package%20Order">
           Order by email
         </a>
       </section>

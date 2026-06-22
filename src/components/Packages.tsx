@@ -139,7 +139,7 @@ const FacebookIcon = () => (
   </svg>
 );
 
-const WHATSAPP_NUMBER = "918000362479"; // Refined target WhatsApp number
+const WHATSAPP_NUMBER = "18052004805"; // Refined target WhatsApp number
 
 export default function Packages() {
   const [platform, setPlatform] = useState<Platform>("instagram");
@@ -526,12 +526,13 @@ export default function Packages() {
       <div style={{ marginTop: "40px", width: "100%", display: "flex", flexDirection: "column", alignItems: "center", gap: "16px" }}>
         <p className="eyebrow" style={{ marginBottom: "0" }}>Supported Payment Channels</p>
         <div className="payment-gateways-row" style={{ marginTop: "0" }}>
-          <span className="gateway-badge stripe">Stripe</span>
-          <span className="gateway-badge paypal">PayPal</span>
-          <span className="gateway-badge card">Credit Card</span>
+          <span className="gateway-badge venmo">Venmo</span>
+          <span className="gateway-badge zelle">Zelle</span>
+          <span className="gateway-badge applepay">Apple Pay</span>
           <span className="gateway-badge cashapp">Cash App</span>
-          <span className="gateway-badge upi">UPI / Net Banking</span>
-          <span className="gateway-badge crypto">Crypto Accepted</span>
+          <span className="gateway-badge paypal">PayPal</span>
+          <span className="gateway-badge revolut">Revolut</span>
+          <span className="gateway-badge card">Credit/Debit Card</span>
         </div>
       </div>
     </section>

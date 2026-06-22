@@ -17,12 +17,12 @@ export default function FAQ() {
             <span className="faq-icon faq-icon-info" aria-hidden="true"></span>
             <div>
               <span className="faq-contact-label">Support &amp; enquiries</span><br/>
-              <a href="mailto:support@velnorworld.shop" className="faq-email-link">support@velnorworld.shop</a>
+              <a href="mailto:velnorteam@gmail.com" className="faq-email-link">velnorteam@gmail.com</a>
             </div>
           </div>
         </div>
 
-        <a className="button button-secondary faq-cta" href="mailto:support@velnorworld.shop?subject=Question%20before%20order">
+        <a className="button button-secondary faq-cta" href="mailto:velnorteam@gmail.com?subject=Question%20before%20order">
           <span className="faq-cta-icon" aria-hidden="true"></span>
           Ask a question
         </a>

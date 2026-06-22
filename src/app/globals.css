@@ -2462,10 +2462,28 @@ li::before {
   letter-spacing: 0.05em;
 }
 
-.gateway-badge.stripe {
-  color: #635bff;
-  border-color: rgba(99, 91, 255, 0.3);
-  background: rgba(99, 91, 255, 0.05);
+.gateway-badge.venmo {
+  color: #008cff;
+  border-color: rgba(0, 140, 255, 0.3);
+  background: rgba(0, 140, 255, 0.05);
+}
+
+.gateway-badge.zelle {
+  color: #7414ca;
+  border-color: rgba(116, 20, 202, 0.3);
+  background: rgba(116, 20, 202, 0.05);
+}
+
+.gateway-badge.applepay {
+  color: #e2e8f0;
+  border-color: rgba(226, 232, 240, 0.3);
+  background: rgba(226, 232, 240, 0.05);
+}
+
+.gateway-badge.cashapp {
+  color: #00d632;
+  border-color: rgba(0, 214, 50, 0.3);
+  background: rgba(0, 214, 50, 0.05);
 }
 
 .gateway-badge.paypal {
@@ -2474,28 +2492,16 @@ li::before {
   background: rgba(0, 121, 193, 0.05);
 }
 
-.gateway-badge.crypto {
-  color: #f7931a;
-  border-color: rgba(247, 147, 26, 0.3);
-  background: rgba(247, 147, 26, 0.05);
-}
-
-.gateway-badge.upi {
-  color: #097969;
-  border-color: rgba(9, 121, 105, 0.3);
-  background: rgba(9, 121, 105, 0.05);
+.gateway-badge.revolut {
+  color: #ffffff;
+  border-color: rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.05);
 }
 
 .gateway-badge.card {
   color: #3b82f6;
   border-color: rgba(59, 130, 246, 0.3);
   background: rgba(59, 130, 246, 0.05);
-}
-
-.gateway-badge.cashapp {
-  color: #00d632;
-  border-color: rgba(0, 214, 50, 0.3);
-  background: rgba(0, 214, 50, 0.05);
 }
 
 /* ════════════════════════════════════════════ RESPONSIVE BREAKPOINTS ═══ */
